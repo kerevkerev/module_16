@@ -1,3 +1,6 @@
+
+// task_1
+
 // Создание экземпляра класса DOMParser
 const parser = new DOMParser();
 
@@ -50,15 +53,3 @@ const result = {
 };
 console.log('result', result);
 
-
-// --------------------------------------------------------------------------
-
-const jsonString = {
-  name: "Anton",
-  age: 36,
-  skills: ["Javascript", "HTML", "CSS"],
-  salary: 80000,
-};
-
-let resultJSON = JSON.stringify(jsonString);
-console.log(resultJSON);
