@@ -51,7 +51,7 @@ function outTable() {
 
   tbodyNod.innerHTML = td;
   outNod.innerHTML = `<iframe src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Кв.1','Кв.2','Кв.3','Кв.4'], datasets:[{label:'Выручка за год',data:[70,18,22,75]}]}}" width="1000px" height="1000px" align="left">
-  Ваш браузер не поддерживает плавающие фреймы!
+  
 </iframe>`;
 
   // `<a href="https://quickchart.io/chart?c={type:'bar',data:{labels:['Кв.1','Кв.2','Кв.3','Кв.4'], datasets:[{label:'Выручка за год',data:[50,60,70,180]}]}}">Показать график</a>`;
