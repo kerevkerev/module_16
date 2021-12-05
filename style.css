@@ -1,11 +1,12 @@
-html,
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: #4000f4;
   background: -webkit-linear-gradient(to bottom left, #4000f4 0%, #ecbad5 100%);
   background: -moz-linear-gradient(to bottom left, #4000f4 0%, #ecbad5 100%);
   background: linear-gradient(to bottom left, #4000f4 0%, #ecbad5 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
@@ -66,4 +67,7 @@ iframe {
   -o-transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
+}
+.out_img{
+  color:#2e1f58
 }
