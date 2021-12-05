@@ -1,0 +1,69 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #4000f4;
+  background: -webkit-linear-gradient(to bottom left, #4000f4 0%, #ecbad5 100%);
+  background: -moz-linear-gradient(to bottom left, #4000f4 0%, #ecbad5 100%);
+  background: linear-gradient(to bottom left, #4000f4 0%, #ecbad5 100%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: aliceblue;
+}
+.button {
+  border: 2px solid #4000f4;
+  border-radius: 0.6em;
+  color: #4000f4;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0px 1px 19px 5px #7234e6;
+}
+.out {
+  width: 500px;
+  height: 300px;
+  padding: 0;
+  overflow: hidden;
+}
+
+iframe {
+  width: 1280px;
+  height: 786px;
+  border: 0;
+  background: rgb(232, 235, 204);
+  -ms-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
