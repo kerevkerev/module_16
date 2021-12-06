@@ -10,32 +10,30 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
     <link <link rel="stylesheet" href="../style.css" />
     <title>task_8</title>
   </head>
   <body>
-    <div class="row align-items-center">
-      <div class="col-auto">
-        <label class="form-label">номер страницы</label>
-        <input type="text" class="page form-control" />
+    <!-- ввод страницы и лимита -->
+    <div class="row">
+      <div class="col-5">
+        <input type="text" class="page form-control" placeholder="номер страницы"/>
       </div>
-
-      <div class="col-auto">
-        <label class="form-label">лимит</label>
-        <input type="text" class="limit form-control" />
+      <div class="col-5">
+        <input type="text" class="limit form-control" placeholder="лимит" />
       </div>
-      <div class="col-auto">
+      <div class="col-2">
         <button class="btn btn-secondary">запрос</button>
       </div>
     </div>
-    <div class="col-auto"><div class="out_info"></div></div>
-    <div class="row justify-content-center mt-3"></div>
-
-    <div class="col-auto">
-      <div class="out_img"></div>
+    <!-- ответ при неправильнов вводе в input -->
+    <div class="row">
+      <div class="col-12 out_info"></div>
     </div>
-
+    <div class="row justify-content-center mt-3"></div>
+    <!-- Галерея -->
+    <div class="out_img row col-sm-6"></div>
+    <!-- btn на главную страницу -->
     <a href="../index.html" class="button">Назад</a>
 
     <script src="task_8.js"></script>

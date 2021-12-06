@@ -6,13 +6,22 @@ const limit = document.querySelector(".limit");
 const ul = document.querySelector(".ul");
 const out_info = document.querySelector(".out_info");
 const out_img = document.querySelector(".out_img");
-//обработчик на запр
+
+//обработчик на запрос
 btn.addEventListener("click", () => {
   getUser(displayResult);
 });
-// function getUser() {
-//      console.log(input.value);
-// }
+
+// картинки из последнего успешно выполненного запроса
+window.onload = getDatalocalStorage();
+function getDatalocalStorage() {
+  if (localStorage.getItem("result")) {
+    let prevRequest = JSON.parse(localStorage.getItem("result"));
+    // console.log(q);
+    displayResult(prevRequest);
+  }
+}
+
 // получить данные
 function getUser(callback) {
   let numbPage = +page.value;
@@ -30,11 +39,12 @@ function getUser(callback) {
     fetch(`https://picsum.photos/v2/list?page=${numbPage}&limit=${limitPage}`)
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         if (result.length === 0) {
           alert("Пользователь с указанным id не найден");
         } else {
           callback(result);
+          localStorage.setItem("result", JSON.stringify(result));
         }
       })
       .catch(() => {
@@ -50,10 +60,10 @@ function displayResult(apiData) {
 
   apiData.forEach((item) => {
     const cardBlock = `
-      <div class="card">
+      <div class="">
         <img
           src="${item.download_url}"
-        //   class="img-fluid"
+        //   class="img-fluid img-thumbnail rounded mx-auto d-block"
         />
         <p>Автор ${item.author}</p>
       </div>
@@ -61,10 +71,11 @@ function displayResult(apiData) {
     cards = cards + cardBlock;
   });
 
-  console.log("end cards", cards);
+  // console.log("end cards", cards);
   out_img.innerHTML = cards;
 }
-//очищение out
+
+//очищение out-ов
 function clearOut() {
   out_img.textContent = "";
   out_info.textContent = "";
